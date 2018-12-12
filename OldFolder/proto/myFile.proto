@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package hello;
+
+service Notificator {
+   rpc SendMessage (MessageReq) returns (Empty) {}
+}
+
+message MessageReq {
+    string type = 1;
+    string text = 2;
+}
+
+message Empty {}
